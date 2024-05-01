@@ -304,11 +304,12 @@ nav{
 }
 
  /* fin tarjetas en programacion */
+
  /* inicio de video  */
  .video-container {
   display: block;
   margin: 0 auto;
-  width: 70%; /* Ajusta el ancho según prefieras */
+  width: 70%; /* 
   
 }
 /* fin de video  */
@@ -471,6 +472,32 @@ div h1 {
 
 
  /* fin responsive entre 770px y 1024px*/
+
+ @media screen and (min-width: 376px) and (max-width: 769px) {
+  /* inicio de video  */
+  .video-container {
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 10%;
+    width: 90%; 
+    
+  }
+  /* fin de video  */
+  .hero_plantilla {
+    width: 300px; /* Ajusta el ancho según prefieras */
+    height: 300px; /* Ajusta la altura según prefieras */
+    overflow: hidden; /* Oculta el contenido que excede el contenedor */
+}
+
+.hero_plantilla img { /* Corrección aquí: aplica los estilos directamente a la imagen dentro de .hero_plantilla */
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Asegura que la imagen cubra todo el contenedor */
+    object-position: center; /* Centra la imagen en el contenedor */
+}
+  
+}
+
 
  /* inicio de responsive 375px */
 
