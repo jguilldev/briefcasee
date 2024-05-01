@@ -306,19 +306,10 @@ nav{
  /* fin tarjetas en programacion */
  /* inicio de video  */
  .video-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh; /* Para centrar verticalmente */
-  margin: 0;
-  padding: 0;
-}
-
-video {
-  max-width: 100%; /* Para asegurarse de que el video no sea más ancho que su contenedor */
-  max-height: 100%; /* Para asegurarse de que el video no sea más alto que su contenedor */
-  margin: 0;
-  padding: 0;
+  display: block;
+  margin: 0 auto;
+  width: 70%; /* Ajusta el ancho según prefieras */
+  
 }
 /* fin de video  */
 
