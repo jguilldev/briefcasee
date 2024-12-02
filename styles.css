@@ -896,11 +896,36 @@ div h1 {
      .p-responsively-768{
       margin-top: 5%;
     }
-    /* inicio de clases blog invertido  */
-    .content-blog1-inv .img-inv {
-      max-height: 200px;
-    }
-    /* fin de clases blog invertido  */
+ 
+ 
+ /* inicio de clases para blog invertido */
+
+ .contenedor-blog-invertido.invertido {
+  display: flex; /* Flexbox para controlar el diseño */
+  flex-direction: row-reverse; /* Invierte el orden: texto a la izquierda, imagen a la derecha */
+  align-items: center; /* Alineación vertical */
+}
+
+.imagen-blog.invertida {
+  flex: 1; /* La imagen ocupa espacio proporcional */
+  margin-left: 20px; /* Separación entre el texto y la imagen */
+  max-width: 50%; /* Limita la imagen a ocupar la mitad del contenedor */
+}
+
+.imagen-blog.invertida img {
+  width: 100%; /* La imagen ocupa todo el ancho del contenedor */
+  height: auto; /* Mantiene la proporción de la imagen */
+  object-fit: contain; /* Ajusta la imagen dentro del contenedor */
+  max-width: 100%; /* Asegura que no crezca más allá del contenedor */
+  display: block; /* Asegura que no haya espacio adicional */
+}
+
+.texto-blog.invertido {
+  flex: 1; /* El texto ocupa el espacio restante */
+}
+
+
+/* fin de clases blog invertido  */
      
 
     /* fin de blog.html  */
