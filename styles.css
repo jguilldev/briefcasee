@@ -458,6 +458,17 @@ div h1 {
      /* fin clases de mas articulos  */
 
 
+     /* inicio imagen centrada */
+     
+     .imagen-centrada {
+      display: block;        
+      margin: 0 auto;        
+      max-width: 100%;      
+      height: auto;        
+    }
+
+    /* final imagen centrada */
+    
 
  /* inicio responsive entre 770px y 1024px */
 

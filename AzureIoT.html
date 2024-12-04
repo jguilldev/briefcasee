@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="icon" type="image/png" href="./imagenes/FABICON.jpg">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans&display=swap" rel="stylesheet">
+|   <title>AZURE e IoT</title>
+</head>
+<body>
+
+     <!-- inicio header   -->
+     <header id="header" >
+        <a href="index.html" target="_self">
+          <figure class="logo">
+            <img  loading="lazy" src="./imagenes/circle-logo.png" alt="Logo" />
+          </figure>
+         </a>
+        <nav class="nav">
+          <ul>
+            <li><a class="ancla_header" href="proyectos.html"target="_self">PROYECTOS</a></li>
+            <li><a class="ancla_header" href="libros.html"target="_self">LIBROS</a></li>
+            <li><a class="ancla_header" href="java.html"target="_self">JAVA</a></li>
+            <li><a class="ancla_header" href="ia.html"target="_self">IA</a></li>
+            <li><a class="ancla_header" href="angular.html"target="_self">ANGULAR</a></li>
+            <li><a class="ancla_header" href="blog_todos.html"target="_self">BLOG</a></li>
+            
+          </ul>
+        </nav>
+      </header>
+    
+      <!-- final del header -->
+
+
+<!-- inicio contenido  -->
+
+<div class="container-blog1">
+      
+    <div class="content-blog1">
+      <div class="image-blog1">
+        <img src="./imagenes/portadaAzure.png" alt="Descripción de la imagen">
+      </div>
+      <div class="text-blog1">
+          <br>
+<br>
+
+<div>
+    <div>
+      <h2>Integración de Raspberry Pi con Azure IoT: Desde la Configuración hasta la Visualización de Datos</h2>
+      <p>La integración de Raspberry Pi con Azure IoT abre un mundo de posibilidades para conectar dispositivos físicos a la nube y monitorear sus datos en tiempo real. Este proyecto se basa en la documentación oficial de Azure y su repositorio, y tiene como objetivo ser una guía clara y comprensible, especialmente para hispanohablantes, sobre cómo realizar la configuración inicial del hardware, la conexión al servicio de Azure IoT Hub, así como la simulación y visualización de los datos sensoriales. Esta guía está diseñada para ayudar a los desarrolladores a comprender cómo aprovechar la nube para gestionar dispositivos IoT, ofreciendo una forma sencilla y detallada de visualizar el flujo de información desde un Raspberry Pi hasta la plataforma de Azure.</p>
+      <!-- ... -->
+    </div>
+  </div>
+
+
+ <!-- inicio de imagen invertida  -->
+ <h2>PROCESO CONFIGURACION ENTORNO</h2>
+
+ <br>
+<div class="contenedor-blog-invertido invertido">
+<div class="imagen-blog invertida">
+ <img style="width: fit-content;" src="./imagenes/RaspberryAzureIoT.png" alt="Descripción de la imagen">
+</div>
+<div class="texto-blog invertido">
+ <p class="p-responsiva-768">La integración de Raspberry Pi con Azure IoT abre un mundo de posibilidades para conectar dispositivos físicos a la nube y monitorear sus datos en tiempo real. Este proyecto se basa en la documentación oficial de Azure y su repositorio, y tiene como objetivo ser una guía clara y comprensible, especialmente para hispanohablantes, sobre cómo realizar la configuración inicial del hardware, la conexión al servicio de Azure IoT Hub, así como la simulación y visualización de los datos sensoriales. Esta guía está diseñada para ayudar a los desarrolladores a comprender cómo aprovechar la nube para gestionar dispositivos IoT, ofreciendo una forma sencilla y detallada de visualizar el flujo de información desde un Raspberry Pi hasta la plataforma de Azure. <br>Para crear una cuenta Azure for Students, dirígete a la página oficial en <a href="https://azure.microsoft.com/en-us/free/students/.">AZURE</a>  Esta cuenta ofrece acceso gratuito a varios servicios de Azure sin necesidad de ingresar una tarjeta de crédito, aunque es limitada en cuanto al número de consultas y recursos disponibles, adecuándose a los requerimientos de los estudiantes. Es necesario contar con una cuenta de correo electrónico educativa válida (generalmente con extensión .edu u otra proporcionada por la universidad o centro educativo), que permita verificar tu estatus como estudiante. Luego, sigue las instrucciones de registro para acceder a los beneficios disponibles para estudiantes.</p>
+</div>
+</div>
+<br>
+
+<p>Luego, en la página principal de Azure, usa el buscador para encontrar el "Centro de IoT" y selecciona la opción para crear un nuevo espacio de trabajo. Una vez dentro, comienza la configuración del entorno de trabajo.</p>
+
+  <!-- fin imagen invertida  -->
+
+<img class="imagen-centrada" src="imagenes/centrodeIoT.png" alt="">
+
+<p>Se debe crear el nuevo espacio de trabajo:</p>
+
+<img class="imagen-centrada" src="imagenes/espacioTrabaj.png" alt="">
+
+<p>En la configuración del espacio de trabajo, selecciona la región más cercana para reducir la latencia y minimizar errores. Activa la opción de recuperación ante desastres para garantizar la seguridad de los proyectos en caso de fallos en los servidores de Azure.</p>
+
+<img class="imagen-centrada" src="imagenes/conf1.png" alt="">
+
+<p>Continúa configurando las redes necesarias para el Centro de IoT, asegurándose de que toda la infraestructura esté preparada para la comunicación adecuada entre los dispositivos y servicios.</p>
+
+<img class="imagen-centrada" src="imagenes/confRedes.png" alt="">
+
+<p>En la sección de administración de acceso, define el método de control de acceso. Puedes optar por "Solo RBAC" para dar permisos específicos a los usuarios, o por la opción de "Directiva de Acceso Compartido + RBAC", que es más flexible y permite un control más detallado. Selecciona esta última opción y marca la casilla del "Rol Colaborador de Datos de IoT Hub" para asignar automáticamente permisos de lectura y escritura. A continuación, ajusta el escalado de particiones en la nube. Para esta aplicación pequeña, cuatro particiones serán suficientes para garantizar un buen rendimiento sin excesos innecesarios.</p>
+
+<img class="imagen-centrada" src="imagenes/confAdministracion.png" alt="">
+
+<p>En la pestaña siguiente se ofrecen complementos de seguridad y actualizaciones inalámbricas para los dispositivos. Dado que la aplicación es sencilla, estos complementos no se habilitarán para evitar una complejidad innecesaria.</p>
+
+<img class="imagen-centrada" src="imagenes/confComplementos.png" alt="">
+
+<p>Después, asigna etiquetas al proyecto para facilitar su búsqueda y administración. Estas etiquetas son útiles cuando hay múltiples proyectos, ya que ayudan a organizar elementos y llevar un mejor control de la facturación</p>
+
+<img class="imagen-centrada" src="imagenes/confEtiquetas.png" alt="">
+
+<p>Finalmente, haz clic en "Revisar y crear". Revisa la configuración proporcionada por la plataforma y, si todo está correcto, se selecciona "Crear" para iniciar la implementación del centro de IoT. La implementación comenzará y deberás esperar a que se complete para empezar a trabajar con el entorno creado.</p>
+
+<img class="imagen-centrada" src="imagenes/confCreacion1.png" alt="">
+<img class="imagen-centrada" src="imagenes/confCreacion2.png" alt="">
+<img class="imagen-centrada" src="imagenes/confCreacion3.png" alt="">
+
+<H3> <a href="AzureIoT2.html"> Continua Haciendo click aqui</a></H3></div>
+<!-- final contenido  -->
+
+
+
+
+
+
+     <!-- Inicio footer -->    
+
+
+      <footer class="footer">
+        <a href="https://github.com/jguilldev" target="_blank"><img src="./imagenes/github.png" alt="Facebook"></a>
+        <a href="https://www.instagram.com/tu_usuario" target="_blank"><img src="./imagenes/instagram-footer.png" alt="Instagram"></a>
+        <a href="https://www.linkedin.com/in/guillermovasbendev/" target="_blank"><img src="./imagenes/linkedin-footer.png" alt="LinkedIn"></a>
+        <a href="mailto:tu_correo@dominio.com"><img src="./imagenes/email-footer.png" alt="Correo Electrónico"></a>
+       </footer>
+    
+
+       
+       <!-- final footer -->    
+</body>
+</html>
