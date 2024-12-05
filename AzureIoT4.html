@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="icon" type="image/png" href="./imagenes/FABICON.jpg">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans&display=swap" rel="stylesheet">
+|   <title>AZURE e IoT 4</title>
+<body>
+
+    <!-- inicio header   -->
+    <header id="header" >
+        <a href="index.html" target="_self">
+          <figure class="logo">
+            <img  loading="lazy" src="./imagenes/circle-logo.png" alt="Logo" />
+          </figure>
+         </a>
+        <nav class="nav">
+          <ul>
+            <li><a class="ancla_header" href="proyectos.html"target="_self">PROYECTOS</a></li>
+            <li><a class="ancla_header" href="libros.html"target="_self">LIBROS</a></li>
+            <li><a class="ancla_header" href="java.html"target="_self">JAVA</a></li>
+            <li><a class="ancla_header" href="ia.html"target="_self">IA</a></li>
+            <li><a class="ancla_header" href="angular.html"target="_self">ANGULAR</a></li>
+            <li><a class="ancla_header" href="blog_todos.html"target="_self">BLOG</a></li>
+            
+          </ul>
+        </nav>
+      </header>
+    
+      <!-- final del header -->
+
+      <!-- inicio de contenido  -->
+
+      <h2>IMPLEMENTACIÓN DE VISUALIZACIÓN DE DATOS EN TIEMPO REAL DESDE AZURE</h2>
+
+      <!-- inicio de imagen izquierda -->
+      <div class="content-blog1-inv">
+        <div class="text-blog1 inv">
+  
+          <p class="p-responsively-768">El siguiente paso será configurar y crear el grupo de consumidores. Para ello, debemos ir al IoT Hub dentro de Azure y acceder a nuestro dispositivo, en este caso RaspberryPiSim. Luego, dirígete a la configuración del centro de conectividad y, en el espacio destinado a los grupos de consumidores, dale un nombre a nuestro grupo; para este caso lo llamaremos de forma similar al entorno, es decir, 'raspberrypisim' (con letras minúsculas). Es importante recordar este nombre ya que más tarde lo utilizaremos en la configuración del socket para establecer la comunicación entre el dispositivo y la aplicación. Esta configuración será esencial para poder leer y procesar los datos que lleguen desde el dispositivo a través del Azure IoT Hub. Además, definir correctamente el grupo de consumidores nos permitirá administrar las suscripciones y asegurar que cada aplicación conectada reciba la información que necesita sin conflictos. Esto es especialmente útil cuando múltiples aplicaciones desean consumir los datos al mismo tiempo, asegurando una comunicación eficiente y controlada.</p>
+          <!-- ... -->
+        </div>
+        <div class="image-blog1 inv">
+          <img style="margin-top: 18%;" src="./imagenes/azureCloud.png" alt="Descripción de la imagen">
+        </div>
+      </div>
+
+      <p>La siguiente imagen muestra como se veria en azure:</p>
+
+      <img class="imagen-centrada" src="imagenes/grupo1.png" alt="">
+
+      <p>Debemos clonar él repositorio de git que entrega por defecto Azure en su documentación, esto lo podemos hacer usando el editor de código VSC (visual studio code) creando una carpeta en cualquier parte de nuestro PC, y accediendo a esa ruta, es decir si tienes la carpeta creada, en C-desktop-carpetacreada, debes guardar esa ruta, abrir la terminal y acceder a ella mediante el comando:</p>
+
+      <p style="text-align: center; list-style: none;" ><i>cd c:\desktop\carpetacreada</i></p>
+ 
+      <p>El siguiente paso será ejecutar el comando para clonar él repositorio que entrega Microsoft en su documentación de azur desde la terminal: <a target="_blank" href="https://learn.microsoft.com/es-es/azure/iot-hub/iot-hub-live-data-visualization-in-web-apps#prerequisites">DOCUMENTACION AZURE</a></p>
+
+        <P>Él comando es el siguiente:</P>
+
+        <p style="text-align: center; list-style: none;" ><i>git clone https://github.com/usuario/web-apps-node-iot-hub-data-visualization.git</i></p>
+
+        <p>Luego ir a la carpeta ejecutando también desde la terminal:</p>
+
+        <p style="text-align: center; list-style: none;" ><i>cd web-apps-node-iot-hub-data-visualization</i></p>
+
+        <p>Esto nos llevará a la terminal a la carpeta del Proyecto
+            Muy bien ahora deberemos configurar él entorno mediante diferentes comandos en la terminal como npm, ejecutando:</p>
+
+            <p style="text-align: center; list-style: none;" ><i>npm install</i></p>
+        
+        <p>Se usa también un framework de node.js para crear él socket o servidor web (Él sockets un punto de comunicación, que permite que nuestro código, se conecte a los datos, que está generando él simulador, y leyendo Azure), ejecutando:</p>
+
+        <p style="text-align: center; list-style: none;" ><i>npm install express</i></p>
+
+        <p>Para interactuar con él IoT Hub se debe instalar azure-iothub, ejecutando:</p>
+
+        <p style="text-align: center; list-style: none;" ><i>npm install azure-iothub</i></p>
+
+        <p>También él Azure-iot-device, que permite la comunicación con él dispositivo simulado, en este caso un raspberryPi, ejecuta desde la terminal:</p>
+
+        <p style="text-align: center; list-style: none;" ><i>npm install Azure-iot-device</i></p>
+
+        <img class="imagen-centrada" src="imagenes/grupo2.png" alt="">
+
+        <p>Él protocolo MQTT es él más usado para enviar mensajes en entornos de IoT, así que también ejecutaremos:</p>
+
+        <p style="text-align: center; list-style: none;" ><i>npm install Azure-iot-device-mqtt</i></p>
+
+        <p>Ejecutar socket.io para la inicialización del socket desde la terminal:</p>
+
+        <p style="text-align: center; list-style: none;" ><i>npm install socket.io</i></p>
+
+        <img class="imagen-centrada" src="imagenes/grupo3.png" alt="">
+
+        <p>Igual que en él código de la simulación debemos reemplazar en la constante de este código la línea const iotHubConnectionString, por la cadena de conexión principal que usamos en él simulador del Raspberry Pi </p>
+
+        <img class="imagen-centrada" src="imagenes/grupo4.png" alt="">
+
+        <p>Además, también la línea que se refiere al grupo de consumo configurado previamente que nosotros llamamos raspberrypisim, en la línea 15 del server.js</p>
+
+        <img class="imagen-centrada" src="imagenes/grupo5.png" alt="">   
+
+        <p>Finalmente ejecutamos desde la terminal usando él comando: </p>
+
+        <p style="text-align: center; list-style: none;" ><i>node server.js</i></p>
+
+        <p>Esto permitirá que se escuche él puerto 3000, y se dibuje las señales actuales, que empieza a recibir este socket, del sensor de temperatura y humedad del Raspberry Pi Simulado</p>
+
+        <img class="imagen-centrada" src="imagenes/grupo6.png" alt=""> 
+
+        <p>Y así llegamos al final del proceso de configuración del grupo de consumidores. Espero que esta guía te haya sido útil para conectar tu Raspberry Pi con Azure IoT Hub. Si te quedó alguna duda o quieres seguir aprendiendo, te invito a echar un vistazo a más artículos y tutoriales en el siguiente enlace:</p>
+
+        <H3> <a href="masArticulos.html"> otros articulos y tutoriales </a></H3></div>
+      
+        <!-- final de contenido  -->
+
+
+      <!-- Inicio footer -->    
+<footer class="footer">
+    <a href="https://github.com/jguilldev" target="_blank"><img src="./imagenes/github.png" alt="Facebook"></a>
+    <a href="https://www.instagram.com/tu_usuario" target="_blank"><img src="./imagenes/instagram-footer.png" alt="Instagram"></a>
+    <a href="https://www.linkedin.com/in/guillermovasbendev/" target="_blank"><img src="./imagenes/linkedin-footer.png" alt="LinkedIn"></a>
+    <a href="mailto:tu_correo@dominio.com"><img src="./imagenes/email-footer.png" alt="Correo Electrónico"></a>
+  </footer>
+  <!-- final footer -->  
+      
+    
+</body>
+</html>
